@@ -1,0 +1,94 @@
+/* ===== ألوان الصفحة ===== */
+:root{
+ --dark:#0b3b39;
+ --dark2:#062724;
+ --lime:#a8e24d;
+ --bg:#fbfbf5;
+ --text:#0f1f1e;
+ --muted:#64748b;
+}
+
+*{box-sizing:border-box}
+body{font-family:'Tajawal',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+
+/* الهيدر العلوي */
+.topbar{background:var(--dark2);color:#fff;font-size:13px;padding:7px 0}
+.nav-overlay{background:linear-gradient(180deg,rgba(6,39,36,0.9),rgba(6,39,36,0));position:absolute;top:36px;left:0;right:0;z-index:20;color:#fff;padding:18px 0}
+.logo{font-weight:900;font-size:22px;display:flex;gap:8px;align-items:center}
+.logo .dot{width:26px;height:26px;background:var(--lime);border-radius:99px;display:flex;align-items:center;justify-content:center;color:var(--dark);font-size:12px}
+.btn-nav{background:var(--lime);color:var(--dark);border:none;padding:10px 22px;border-radius:99px;font-weight:800}
+.btn-nav:hover{background:#9ed63e}
+.btn-lime{background:var(--lime);color:var(--dark);border:none;padding:14px 28px;border-radius:99px;font-weight:800;font-size:15px;transition:.3s}
+.btn-lime:hover{transform:translateY(-2px)}
+
+/* شرائح الهيرو */
+.carousel-item{height:620px;background-size:cover;background-position:center}
+.carousel-item::before{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(6,39,36,0.95) 0%,rgba(6,39,36,0.9) 45%,rgba(6,39,36,0.1) 100%)}
+.slide-content{position:relative;z-index:2;max-width:650px;padding-top:120px}
+.slide-content h1{font-size:52px;line-height:1.15;font-weight:900;color:#fff}
+.slide-content h1 span{color:var(--lime)}
+.slide-content p{color:#cbd5e1;max-width:480px;font-size:16px;margin-bottom:26px}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);padding:6px 14px;border-radius:99px;font-size:13px;margin-bottom:18px;color:#fff}
+.call{display:flex;align-items:center;gap:10px;color:#fff}
+.call .circle{width:44px;height:44px;background:var(--lime);border-radius:99px;display:flex;align-items:center;justify-content:center;color:var(--dark)}
+.call small{font-size:11px}
+.carousel-indicators button{width:10px!important;height:10px!important;border-radius:99px;background:rgba(255,255,255,0.4)!important}
+.carousel-indicators button.active{background:var(--lime)!important;width:28px!important}
+
+/* حركات الباور بوينت */
+.slide-in{opacity:0;transform:translateY(40px);transition:all .8s ease}
+.slide-in.visible{opacity:1;transform:translateY(0)}
+.slide-right{opacity:0;transform:translateX(-50px);transition:all .8s ease}
+.slide-right.visible{opacity:1;transform:translateX(0)}
+.slide-left{opacity:0;transform:translateX(50px);transition:all .8s ease}
+.slide-left.visible{opacity:1;transform:translateX(0)}
+.delay1{transition-delay:.15s}
+.delay2{transition-delay:.3s}
+
+/* الخدمات */
+.tag{font-size:13px;font-weight:700;color:var(--dark)}
+.card{border-radius:22px;padding:28px;min-height:220px;transition:.3s;border:1px solid #eee}
+.card:hover{transform:translateY(-8px)}
+.card.white{background:#fff}
+.card.lime{background:var(--lime);color:#062724}
+.card.dark{background:var(--dark);color:#fff}
+.card h3{margin:14px 0 8px;font-size:18px;font-weight:800}
+.card p{font-size:14px;margin:0 0 20px;opacity:0.85}
+.link-pill{background:#fff;color:var(--dark);padding:8px 16px;border-radius:99px;font-size:13px;font-weight:700;border:none}
+.card.dark .link-pill{background:var(--lime);color:var(--dark)}
+.card.lime .link-pill{background:var(--dark);color:#fff}
+.card.white .link-pill{background:#f1f5f9}
+
+/* من نحن */
+.about-main-img{height:280px;width:100%;object-fit:cover;border-radius:16px}
+.about-small-img{height:150px;width:100%;object-fit:cover;border-radius:16px}
+.stat-lime{background:var(--lime);border-radius:16px;padding:18px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.stat-num{font-size:32px;font-weight:900}
+.stat-label{font-size:13px;font-weight:700}
+.about-title{font-size:34px;font-weight:900;line-height:1.2}
+.avatar{width:40px;height:40px;background:#eee;border-radius:99px;display:flex;align-items:center;justify-content:center;font-weight:800}
+.doctor-name{font-size:14px}
+.rating-box{background:#f8fbf2;padding:16px 20px;border-radius:16px;min-width:160px}
+.stars{color:#f59e0b}
+.rating-num{font-size:28px;font-weight:900}
+.rating-num small{font-size:14px}
+.rating-text{font-size:13px;color:var(--muted)}
+.skills{background:#f8fbf2;padding:16px 20px;border-radius:16px;flex:1;font-size:12px;font-weight:700;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+
+/* الحجز */
+.booking{background:#fff;border-radius:28px;padding:36px;box-shadow:0 20px 50px rgba(0,0,0,0.06);border:1px solid #eee}
+.booking h2{font-size:28px;font-weight:900}
+.label{font-size:14px;font-weight:800;margin:18px 0 8px;display:block}
+.form-control,.form-select{padding:14px;border-radius:14px;background:#f8fafc;font-family:'Tajawal'}
+.day{border:1px solid #e2e8f0;border-radius:14px;padding:14px;text-align:center;cursor:pointer;font-size:14px;background:#fff;transition:.2s}
+.day.active{background:var(--dark);color:#fff;font-weight:800}
+.hour{border:1px solid #e2e8f0;padding:10px 18px;border-radius:99px;cursor:pointer;font-size:14px;background:#fff;transition:.2s}
+.hour.active{background:var(--lime);color:var(--dark);border-color:var(--lime);font-weight:800}
+.btn-main{background:var(--lime);color:var(--dark);border:none;padding:16px;width:100%;border-radius:99px;font-size:16px;font-weight:900;transition:.3s}
+.btn-main:hover{transform:scale(1.01)}
+.footer{background:var(--dark);color:#fff;padding:28px 0;text-align:center;font-size:13px}
+
+@media(max-width:768px){
+ .slide-content h1{font-size:34px}
+ .carousel-item{height:560px}
+}
